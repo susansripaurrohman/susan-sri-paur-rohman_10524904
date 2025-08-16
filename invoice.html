@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Narue.co— Invoice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="logo">Narue.<span>co</span></a>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Produk</a>
+      <a href="transaksi.html">Transaksi</a>
+      <a href="invoice.html">Invoice</a>
+      <a href="kontak.html">Kontak Kami</a>
+    </nav>
+  </header>
+
+  <!-- Marquee -->
+  <div class="ticker">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      Diskon spesial Agustus! Gratis ongkir untuk pesanan &ge; Rp250.000 • Gunakan kode: MERDEKA75 • Stok terbatas!
+    </marquee>
+  </div>
+
+  <!-- Invoice -->
+  <div class="container">
+    <h2>Struk / Invoice</h2>
+    <div class="invoice" id="invoiceBox">
+      <div class="grid-2">
+        <div>
+          <h2>PakaianShop</h2>
+          <div class="muted">Jl. Contoh No. 123, Jakarta</div>
+          <div class="muted">Telp: 021-123456</div>
+        </div>
+        <div style="text-align:right">
+          <div id="invNumber">INV-</div>
+          <div id="invDate" class="muted"></div>
+        </div>
+      </div>
+      <hr>
+      <div class="grid-2">
+        <div>
+          <h3>Pembeli</h3>
+          <div id="invBuyer"></div>
+        </div>
+        <div>
+          <h3>Pengiriman & Pembayaran</h3>
+          <div id="invShipPay"></div>
+        </div>
+      </div>
+      <h3>Rincian Pesanan</h3>
+      <table class="table">
+        <thead>
+          <tr><th>Produk</th><th>Ukuran/Warna</th><th>Qty</th><th>Harga</th><th>Subtotal</th></tr>
+        </thead>
+        <tbody id="invItems"></tbody>
+        <tfoot class="totals">
+          <tr><td colspan="4" class="label">Subtotal</td><td class="value" id="invSubtotal">-</td></tr>
+          <tr><td colspan="4" class="label">Ongkir</td><td class="value" id="invShipping">-</td></tr>
+          <tr><td colspan="4" class="label">PPN 11%</td><td class="value" id="invTax">-</td></tr>
+          <tr><td colspan="4" class="label">Grand Total</td><td class="value" id="invGrand">-</td></tr>
+        </tfoot>
+      </table>
+      <button class="btn primary print-btn" onclick="window.print()">Cetak / Print</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>&copy; — Tugas UAS</div>
+    <div class="links">
+      <a href="https://www.freepik.com" target="_blank">Sumber gambar</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

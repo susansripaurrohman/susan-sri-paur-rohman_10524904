@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Narue.co</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Toko pakaian: kaos, kemeja, hoodie, jeans, dress." />
+</head>
+<body>
+  <!-- Header & Menu -->
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="logo<">Narue.co</span></a>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Produk</a>
+      <a href="transaksi.html">Transaksi</a>
+      <a href="invoice.html">Invoice</a>
+      <a href="kontak.html">Kontak Kami</a>
+    </nav>
+  </header>
+
+  <!-- Marquee -->
+  <div class="ticker">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      Diskon spesial Agustus! Gratis ongkir untuk pesanan &ge; Rp250.000 • Gunakan kode: MERDEKA75 • Stok terbatas!
+    </marquee>
+  </div>
+
+  <!-- Layout -->
+  <div class="container layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Kategori</h3>
+      <div>
+        <span class="tag">Kaos</span>
+        <span class="tag">Kemeja</span>
+        <span class="tag">Hoodie</span>
+        <span class="tag">Jeans</span>
+        <span class="tag">Dress</span>
+      </div>
+      <hr>
+      <h3>Promo</h3>
+      <p>Belanja &ge; Rp250.000 dapat <b>gratis ongkir</b>.</p>
+      <a 
+        <img src="https://images.unsplash.com/photo-1520975693410-001d8e3f42f4?w=600&auto=format&fit=crop&q=60" alt="Promo banner">
+      </a>
+    </aside>
+
+    <!-- Produk -->
+    <main class="content">
+      <h2>Produk Pakaian</h2>
+      <p class="notice">Klik <b>Beli</b> untuk melanjutkan ke halaman transaksi.</p>
+
+      <section class="grid">
+        <!-- Produk 1 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=900&auto=format&fit=crop&q=60" alt="Kaos Polos Unisex">
+          <div class="badge">Best Seller</div>
+          <h4>Kaos Polos Unisex</h4>
+          <div class="price">Rp75.000</div>
+          <input id="qty1" type="number" class="qty" min="1" value="1">
+          <p>Katun combed 24s, adem dan nyaman.</p>
+          <div class="actions">
+            <button class="btn primary" onclick="buyProduct('Kaos Polos Unisex', 75000, document.getElementById('qty1').value)">Beli</button>
+          </div>
+        </article>
+
+        <!-- Produk 2 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?w=900&auto=format&fit=crop&q=60" alt="Kemeja Casual Pria">
+          <div class="badge">New</div>
+          <h4>Kemeja Casual Pria</h4>
+          <div class="price">Rp145.000</div>
+          <input id="qty2" type="number" class="qty" min="1" value="1">
+          <p>Model kekinian, cocok untuk kerja maupun hangout.</p>
+          <div class="actions">
+            <button class="btn primary" onclick="buyProduct('Kemeja Casual Pria', 145000, document.getElementById('qty2').value)">Beli</button>
+          </div>
+        </article>
+
+        <!-- Produk 3 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?w=900&auto=format&fit=crop&q=60" alt="Jaket Hoodie Oversize">
+          <div class="badge">Hot</div>
+          <h4>Jaket Hoodie Oversize</h4>
+          <div class="price">Rp195.000</div>
+          <input id="qty3" type="number" class="qty" min="1" value="1">
+          <p>Bahan fleece premium, hangat dan lembut.</p>
+          <div class="actions">
+            <button class="btn primary" onclick="buyProduct('Jaket Hoodie Oversize', 195000, document.getElementById('qty3').value)">Beli</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>&copy; Tugas UAS</div>
+    <div class="links">
+      <a href="https://www.freepik.com" target="_blank">Sumber gambar</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

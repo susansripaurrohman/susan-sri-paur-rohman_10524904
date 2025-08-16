@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Narue.co — Transaksi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="logo">Narue.<span>co</span></a>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Produk</a>
+      <a href="transaksi.html">Transaksi</a>
+      <a href="invoice.html">Invoice</a>
+      <a href="kontak.html">Kontak Kami</a>
+    </nav>
+  </header>
+
+  <!-- Marquee -->
+  <div class="ticker">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      Diskon spesial Agustus! Gratis ongkir untuk pesanan &ge; Rp250.000 • Gunakan kode: MERDEKA75 • Stok terbatas!
+    </marquee>
+  </div>
+
+  <!-- Form Transaksi -->
+  <div class="container">
+    <h2>Form Transaksi / Reservasi</h2>
+    <div class="form">
+      <div class="row">
+        <div>
+          <label>Nama Lengkap</label>
+          <input type="text" id="custName" placeholder="Nama Anda">
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email" id="custEmail" placeholder="email@contoh.com">
+        </div>
+        <div>
+          <label>No. HP</label>
+          <input type="tel" id="custPhone" placeholder="08xxxxxxxxxx">
+        </div>
+        <div>
+          <label>Alamat Pengiriman</label>
+          <textarea id="custAddress" placeholder="Alamat lengkap"></textarea>
+        </div>
+        <div>
+          <label>Ukuran</label>
+          <select id="size">
+            <option value="">-- Pilih Ukuran --</option>
+            <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+          </select>
+        </div>
+        <div>
+          <label>Warna</label>
+          <select id="color">
+            <option value="">-- Pilih Warna --</option>
+            <option>Hitam</option><option>Putih</option><option>Abu</option><option>Navy</option><option>Maroon</option>
+          </select>
+        </div>
+        <div>
+          <label>Jumlah</label>
+          <input type="number" id="qty" min="1" value="1">
+        </div>
+        <div>
+          <label>Metode Pengiriman</label>
+          <select id="shipping">
+            <option value="REG">REG (2-4 hari) — Rp15.000</option>
+            <option value="EXP">EXP (1-2 hari) — Rp25.000</option>
+            <option value="SAME">Same Day — Rp35.000</option>
+          </select>
+        </div>
+        <div>
+          <label>Metode Pembayaran</label>
+          <select id="payment">
+            <option>Transfer Bank</option>
+            <option>VA</option>
+            <option>COD</option>
+            <option>QRIS</option>
+          </select>
+        </div>
+        <div>
+          <label>Catatan</label>
+          <textarea id="note" placeholder="Catatan tambahan (opsional)"></textarea>
+        </div>
+      </div>
+
+      <!-- Ringkasan Produk -->
+      <div class="summary" id="productSummary">
+        <strong>Ringkasan Produk</strong>
+        <div id="summaryBody">Memuat...</div>
+      </div>
+
+      <!-- Tombol -->
+      <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn" onclick="history.back()">Kembali</button>
+        <button class="btn primary" onclick="submitOrder()">Checkout / Buat Pesanan</button>
+      </div>
+      <p class="notice">Data disimpan sementara di <i>localStorage</i> untuk kebutuhan demo UAS.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>&copy; — Tugas UAS</div>
+    <div class="links">
+      <a href="https://www.freepik.com" target="_blank">Sumber gambar</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
